@@ -2,32 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Arial", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  /* letter-spacing: 0.005rem; */
+  /* font-size: calc(100vw * 100 / 1512); */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media all and (min-width: 1512px) {
+  html {
+    /* font-size: 100px; */
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, "Arial", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .text-color-text1 {
+    @apply text-text1 dark:text-text1Dark;
+  }
+
+  .text-color-text2 {
+    @apply text-text2 dark:text-text2Dark;
+  }
+
+  .text-color-link {
+    @apply text-textLink dark:text-textLinkDark;
+  }
+
+  .bg-color-bgPage {
+    @apply bg-bgPage dark:bg-bgPageDark;
+  }
+
+  .bg-color-bg1 {
+    @apply bg-bg1 dark:bg-bg1Dark;
+  }
+
+  .bg-color-divider1 {
+    @apply bg-divider1 dark:bg-divider1Dark;
+  }
+
+  .border-color-divider1 {
+    @apply border-divider1 dark:border-divider1Dark;
   }
 }
